@@ -81,7 +81,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			  	}
                 //
                 function fs_calc_shipping(){
-                    return "Frete";
+                    return 50;
                 }    
                 /**
 				 * @access public
@@ -89,16 +89,16 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				 * @return void
 				 */
                 //
-                public function calculate_shipping($package) {
-					$rate = array(
-						'id' => $this->id,
-						'label' => $this->title,
-						'cost' => $this->fs_calc_shipping(),
-						'calc_tax' => 'per_item'
-					);
-					$this->add_rate( $rate );
+                public function calculate_shipping($package = array()) {
+                        $fs_rate = array(
+                            'id'      => 'rte-rodonaves',
+                            'label' => 'RTE Rodonaves',
+                            'cost'  => $this->fs_calc_shipping(),
+                            'calc_tax' => 'per_item'
+                        );
+                        $this->add_rate( $fs_rate );                  
+					
 				}
-
             }
         }
     }
