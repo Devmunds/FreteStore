@@ -5,7 +5,7 @@
  * Description:           Cálculo do frete com o serviço da web Frete Store
  * Version:                 1.0.0
  * Requires at least:   4.1.0
- * WC tested up to:    4.1.0
+ * WC tested up to:    5.5.1
  * Author:                   Devmunds
  * Author uri:              https://devmunds.com.br/
  * License:                  GPLv2 or later
